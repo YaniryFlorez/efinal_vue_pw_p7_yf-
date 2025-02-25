@@ -29,8 +29,8 @@
   </template>
   
   <script>
-  import { guardarFachada } from "../Clients/ClienteFacturacion"; // Importar función de API
-  
+
+  import { guardarFachada } from '@/Clients/ClienteFacturacion';
   export default {
     name: "IngresarProducto",
     data() {
@@ -47,9 +47,9 @@
       };
     },
     methods: {
-      async guardarProducto() {
+      async guardarFachada() {
         try {
-          await guardarProducto(this.producto);
+          await guardarFachada(this.producto);
           this.mensaje = "Producto guardado exitosamente.";
           this.mensajeClase = "mensaje-exito";
           this.limpiarFormulario();
